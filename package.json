@@ -1,0 +1,21 @@
+{
+  "name": "space-x-next-launch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lambda-serve": "netlify-lambda serve functions",
+    "lambda-build": "netlify-lambda build functions",
+    "scss": "node-sass --watch styles -o styles"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "netlify-lambda": "^2.0.3",
+    "node-sass": "^5.0.0",
+    "webpack": "^5.17.0"
+  }
+}

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans:wght@400;600;800&display=swap');
+@import './variables';
+@import './index';
+
+:root {
+  --vh: 1px;
+}
+
+html,
+body {
+  background-color: $color-white;
+  height: calc(var(--vh, 1vh) * 100);
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+body {
+  color: $color-light-gray;
+  font-family: 'Roboto', sans-serif;
+  font-size: $font-size-base;
+  overflow: hidden;
+  transition: background-color 0.5s ease-in-out;
+
+  h1 {
+    font-size: $font-size-medium;
+    margin: 0;
+
+    @media (min-width: $breakpoint-mobile-horizontal) {
+      font-size: $font-size-xl;
+    }
+  }
+
+  h2 {
+    font-size: $font-size-base;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+
+    @media (min-width: $breakpoint-mobile-horizontal) {
+      font-size: $font-size-medium;
+    }
+  }
+
+  h3 {
+    font-size: $font-size-base;
+    font-weight: 500;
+
+    @media (min-width: $breakpoint-mobile-horizontal) {
+      font-size: $font-size-medium;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $color-black;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  a {
+    color: $color-black;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  button,
+  .button {
+    background-color: $color-black;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    color: $color-white;
+    cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
+    font-size: $font-size-s;
+    margin: 25px 0 0 0;
+    outline: none;
+    padding: 7px;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+    width: 100%;
+
+    @media (min-width: $breakpoint-mobile-horizontal) {
+      width: auto;
+    }
+
+    &:hover {
+      background-color: $color-white;
+      border-color: $color-black;
+      color: $color-black;
+
+      a {
+        color: $color-black;
+      }
+    }
+
+    a {
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+
+  margin: 0 auto;
+  max-width: $content-max-width;
+  padding: 0 $container-padding-mobile;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 0 $container-padding-tablet;
+  }
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    padding: 0 $container-padding-desktop;
+  }
+}
+
+// HELPER CLASSES
+
+.resetList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+

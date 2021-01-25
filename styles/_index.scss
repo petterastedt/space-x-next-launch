@@ -1,0 +1,55 @@
+.container {
+  &-inner {
+    max-width: 510px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .content {
+    min-height: 160px;
+    position: relative;
+
+    &-loading {
+      background-color: $color-white;
+      display: flex;
+      height: 100%;
+      position: absolute;
+      visibility: visible;
+      width: 100%;
+
+      &--isHidden {
+        visibility: hidden;
+      }
+    }
+  }
+
+  .list {
+    &-item-description {
+      font-size: $font-size-s;
+
+      @media (min-width: $breakpoint-mobile-horizontal) {
+        font-size: $font-size-base;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: $font-size-s;
+    width: 100%;
+
+    li {
+      font-size: $font-size-xs;
+      font-weight: 600;
+      margin-right: 10px;
+      margin-top: 5px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
