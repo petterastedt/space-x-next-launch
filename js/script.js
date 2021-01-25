@@ -5,7 +5,7 @@ let upcomingLaunches
   // SET PROPER HEIGHT ON MOBILE DEVICES
   document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`)
 
-  fetch('http://localhost:9000/getdata')
+  fetch('/.netlify/functions/getdata')
   .then(response => response.json())
   .then(response => {
     upcomingLaunches = response
